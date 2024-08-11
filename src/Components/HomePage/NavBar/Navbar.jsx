@@ -26,6 +26,9 @@ const Navbar = () => {
           <li className="text-black  hover:text-green-700 hover-transition">
             <a href="/">Home</a>
           </li>
+          <li className="text-black  hover:text-green-700 hover-transition">
+            <a href="/store">Store</a>
+          </li>
           <li className="relative text-black hover:text-green-700 hover-transition">
             <button  onMouseOver={toggleDropdown} className="flex items-center">
               Brands

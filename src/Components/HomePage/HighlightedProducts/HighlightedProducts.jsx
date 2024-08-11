@@ -98,7 +98,7 @@ const HighlightedProducts = () => {
                   </svg>
                   Add to Cart
                 </button>
-                <button className="bg-gradient-to-r from-green-300 to-green-700 text-black px-4 py-2 rounded-lg flex items-center hover:from-gray-300 hover:to-gray-500 transition-all duration-300">
+                <button className="bg-gradient-to-r from-green-300 to-green-700 text-black px-2 py-1 rounded-lg flex items-center hover:from-gray-300 hover:to-gray-500 transition-all duration-300">
                   <svg
                     className="w-5 h-5 mr-2"
                     fill="currentColor"

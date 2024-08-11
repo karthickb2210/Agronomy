@@ -48,7 +48,8 @@ export default function Footer() {
                 <h3 className=' text-white ml-3'>Iron Valley Agronomy</h3>
             </a>
            
-            
+            <a href='#' className=' text-white hover:text-blue-600 hover:underline'>Terms & Conditions</a>
+            <a href='#' className=' text-white hover:text-blue-600 hover:underline'>Privacy Policies</a>
             <div class="flex -mx-2">
                 <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"

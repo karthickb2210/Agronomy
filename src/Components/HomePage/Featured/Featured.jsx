@@ -6,10 +6,7 @@ export default function Featured() {
     <>
         <section class="bg-white ">
     <div class="container px-6 py-10 mx-auto">
-        <motion.h1 variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }} class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl ">explore our <br/> awesome <span class="text-blue-500">Components</span></motion.h1>
+        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl ">explore our <br/> Vital <span class="text-blue-500">Conditions</span></h1>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
             <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
