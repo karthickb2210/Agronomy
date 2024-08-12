@@ -9,7 +9,7 @@ import "./shop.css"
 
 export default function Shop() {
   return (
-    <div>
+    <div className='bod'>
       <UserProgressContextProvider>
       <CartContextProvider>
         <Header />
