@@ -9,7 +9,7 @@ export default function Layout() {
              
             <Routes>
                 <Route path='/' element={<MainPage />}></Route>
-                <Route path='/store' element={<Shop />}> </Route>
+                <Route path='/shop' element={<Shop />}> </Route>
             </Routes>
             
         </BrowserRouter>
