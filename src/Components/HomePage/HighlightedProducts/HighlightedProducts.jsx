@@ -98,24 +98,10 @@ const HighlightedProducts = () => {
                   >
                     <path d="M3 3a1 1 0 011-1h2a1 1 0 011 1v1h8V3a1 1 0 011-1h2a1 1 0 011 1v1h-1.586l1.293 1.293a1 1 0 01-.293.707L17 7v8a1 1 0 01-1 1H4a1 1 0 01-1-1V7L1.293 5.293a1 1 0 01-.293-.707L2 4H1V3zM4 8v7h10V8H4zm2 5a1 1 0 112 0 1 1 0 01-2 0zm6 0a1 1 0 112 0 1 1 0 01-2 0z" />
                   </svg>
-                  Add to Cart
+                  Visit our store
                 </button></Link>
-                <Link to={`/store`}>
-                <button className="bg-gradient-to-r from-green-300 to-green-700 text-black px-2 py-1 rounded-lg flex items-center hover:from-gray-300 hover:to-gray-500 transition-all duration-300">
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm8 3a1 1 0 00-.832.445l-2.995 4.493L7.67 8.669a1 1 0 10-1.34 1.486l2.996 3.897a1 1 0 001.664-.058l3.662-5.493A1 1 0 0013 6z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  View
-                </button></Link>
+                
+                
               </div>
             </div>
           </div>

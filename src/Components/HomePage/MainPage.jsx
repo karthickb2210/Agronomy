@@ -5,6 +5,7 @@ import HighlightedProducts from "./HighlightedProducts/HighlightedProducts"
 import Featured from "./Featured/Featured"
 import Process from "./Process/Process"
 import Footer from "./Footer/Footer"
+import AeroponicsFarming from '../Aeroponics/AeroponicsFarming'
 
 
 export default function MainPage() {
@@ -12,6 +13,7 @@ export default function MainPage() {
     <>
         <Navbar />
     <Carousel/>
+    <AeroponicsFarming />
     <HighlightedProducts />
     <Featured />
     

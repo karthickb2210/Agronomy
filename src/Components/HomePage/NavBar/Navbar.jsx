@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from "/logo.png"
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,8 +50,9 @@ const Navbar = () => {
             )}
           </li>
           <li className="text-black hover:text-green-700 hover-transition">
-            <a href="#about">Farm</a>
-          </li>
+          <Link to={`/farm`}>
+            <div >Farm</div>
+            </Link></li>
           <li className="text-black hover:text-green-700 hover-transition">
             <a href="#contact">Contact</a>
           </li>
