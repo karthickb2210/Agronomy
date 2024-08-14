@@ -2,7 +2,6 @@ import { useContext } from 'react';
 
 import Modal from './UI/Modal.jsx';
 import CartContext from '../store/CartContext.jsx';
-import { currencyFormatter } from '../util/formatting.js';
 import Input from './UI/Input.jsx';
 import Button from './UI/Button.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
@@ -95,7 +94,7 @@ export default function Checkout() {
     <Modal open={userProgressCtx.progress === 'checkout'} onClose={handleClose}>
       <form onSubmit={handleSubmit}>
         <h2>Checkout</h2>
-        <p>Total Amount: {currencyFormatter.format(cartTotal)}</p>
+        <p>Total Amount: ₹ {cartTotal}</p>
 
         <Input label="Full Name" type="text" id="name" />
         <Input label="E-Mail Address" type="email" id="email" />

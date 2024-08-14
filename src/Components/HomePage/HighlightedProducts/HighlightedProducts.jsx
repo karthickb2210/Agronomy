@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HighlightedProducts = () => {
   const products = [
@@ -87,6 +88,7 @@ const HighlightedProducts = () => {
                 <p>{product.description}</p>
               </div>
               <div className="mt-4 flex justify-between">
+              <Link to={`/store`}>
                 <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-lg flex items-center hover:from-blue-600 hover:to-blue-800 transition-all duration-300">
                   <svg
                     className="w-5 h-5 mr-2"
@@ -97,7 +99,8 @@ const HighlightedProducts = () => {
                     <path d="M3 3a1 1 0 011-1h2a1 1 0 011 1v1h8V3a1 1 0 011-1h2a1 1 0 011 1v1h-1.586l1.293 1.293a1 1 0 01-.293.707L17 7v8a1 1 0 01-1 1H4a1 1 0 01-1-1V7L1.293 5.293a1 1 0 01-.293-.707L2 4H1V3zM4 8v7h10V8H4zm2 5a1 1 0 112 0 1 1 0 01-2 0zm6 0a1 1 0 112 0 1 1 0 01-2 0z" />
                   </svg>
                   Add to Cart
-                </button>
+                </button></Link>
+                <Link to={`/store`}>
                 <button className="bg-gradient-to-r from-green-300 to-green-700 text-black px-2 py-1 rounded-lg flex items-center hover:from-gray-300 hover:to-gray-500 transition-all duration-300">
                   <svg
                     className="w-5 h-5 mr-2"
@@ -112,7 +115,7 @@ const HighlightedProducts = () => {
                     />
                   </svg>
                   View
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
