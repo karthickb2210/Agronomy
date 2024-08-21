@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../HomePage/NavBar/Navbar';
 import Footer from '../HomePage/Footer/Footer';
+import BookingForm from './BookingForm';
 
 const VisitUs = () => {
+
+  const [showForm,setShowFarm] = useState(false)
   return (
     <>
     <Navbar />
+    { showForm && 
+      <BookingForm 
+      status = {showForm}
+      handleState = {setShowFarm}
+       />
+    }
     <div className="flex flex-col items-center justify-center p-6 mt-24  min-h-screen">
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl transform transition hover:shadow-2xl">
         <h2 className="text-3xl font-bold mb-4 text-green-700 text-center">Visit Our Aeroponics Farm</h2>
         <p className="text-gray-700 mb-4 text-center">
           Experience the future of farming! Our aeroponics farm offers an innovative and sustainable way to grow
@@ -49,10 +58,25 @@ KK Nagar,
             href="https://www.google.com/maps/place/25,+1st+St,+Ganga+Nagar,+Sapthagiri+Colony,+West+Jafferkhanpet,+Chennai,+Tamil+Nadu+600083/@13.0298349,80.2009034,18.28z/data=!4m15!1m8!3m7!1s0x3a526726e487dc5b:0xdb43cd36eb88c4bf!2sSapthagiri+Colony,+West+Jafferkhanpet,+Chennai,+Tamil+Nadu+600083!3b1!8m2!3d13.0300592!4d80.201803!16s%2Fg%2F1tfmltjt!3m5!1s0x3a5267287b8d6d45:0x5b54ec2b6ee35b47!8m2!3d13.0300012!4d80.2024014!16s%2Fg%2F11sb0fc7yj?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-2 bg-green-600 text-white font-medium rounded-full transition duration-300 hover:bg-green-700 animate-bounce"
+            className="inline-block mt-6 px-6 py-2 bg-green-600 text-white font-medium rounded-full transition duration-300 hover:bg-green-700 "
           >
             Get Directions
           </a>
+        </div>
+        <div>
+          <p className=' text-center text-xl mt-7'>
+            Book your appointment now to visit our farm 
+          </p>
+        </div>
+
+        <div className="flex justify-center">
+          <button onClick={()=>{
+            setShowFarm(prev => !prev)
+          }}
+            className="inline-block mt-6 px-6 py-2 bg-green-600 text-white font-medium rounded-full transition duration-300 hover:bg-green-700 animate-bounce"
+          >
+            Book Now
+          </button>
         </div>
 
         <div className="mt-8 p-6 bg-green-50 rounded-lg">
