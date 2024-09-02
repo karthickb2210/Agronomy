@@ -17,13 +17,15 @@ const Navbar = () => {
     setDropdownOpen(!dropdownOpen)
   }
   return (
-    <nav className="bg-white p-4 z-10 shadow-lg fixed top-0 w-full">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className=" bg-white p-4 z-10 shadow-lg fixed top-0 w-full">
+      <div className="container mx-auto flex justify-start items-center">
+      <Link to={`/`}>
         <div className="text-black space-x-4 text-lg font-semibold flex">
             <img src={logo} className=' ml-10  max-h-8 max-w-8' alt='Logo' />
             <a className='' href='#' >Ironvalley Agronomy</a>
         </div>
-        <ul className={`hidden md:flex text-lg space-x-8 mr-10`}>
+        </Link>
+        <ul className={`hidden md:flex ml-24 text-lg space-x-8`}>
           <li className="text-black  hover:text-green-700 hover-transition">
             <a href="/">Home</a>
           </li>

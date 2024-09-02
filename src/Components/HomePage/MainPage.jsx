@@ -15,7 +15,7 @@ export default function MainPage() {
     <Popup />
         <Navbar />
     <Carousel/>
-    <AeroponicsFarming />
+    {/* <AeroponicsFarming /> */}
     <HighlightedProducts />
     <Featured />
     <div className=' sm:invisible xl:visible md:visible'>
