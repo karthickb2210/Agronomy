@@ -33,8 +33,11 @@ function cartReducer(state, action) {
       // Item does not exist, add new item with the specified grams and price
       updatedItems.push({ ...action.item, quantity: 1 });
     }
-  
+    const val = {...state, items:updatedItems};
+    console.log(val.items)
+    localStorage.setItem("cart",JSON.stringify(val.items))
     // Return the updated state with the modified items array
+
     return { ...state, items: updatedItems };
   }
   
@@ -60,7 +63,9 @@ function cartReducer(state, action) {
       };
       updatedItems[existingCartItemIndex] = updatedItem;
     }
-
+    const val = {...state, items:updatedItems};
+    console.log(val.items)
+    localStorage.setItem("cart",JSON.stringify(val.items))
     return { ...state, items: updatedItems };
   }
 
@@ -76,7 +81,8 @@ export function CartContextProvider({ children }) {
     { items: localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [] });
 
   function addItem(item) {
-    dispatchCartAction({ type: 'ADD_ITEM', item });
+    const items = dispatchCartAction({ type: 'ADD_ITEM', item });
+    
   }
 
   function removeItem(item) {
