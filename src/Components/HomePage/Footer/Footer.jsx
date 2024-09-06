@@ -30,17 +30,16 @@ export default function Footer() {
             </div>
 
             <div>
-                <p class="font-semibold text-gray-800 dark:text-white">Industries</p>
+                <p class="font-semibold text-gray-800 dark:text-white">Brands</p>
 
                 <div class="flex flex-col items-start mt-5 space-y-2">
-                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail & E-Commerce</a>
-                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information Technology</a>
-                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance & Insurance</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Green Muscle </a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Devine Cotyledons</a>
                 </div>
             </div>
         </div>
         
-        <hr class="my-6 border-gray-200 md:my-8 dark:border-gray-700" />
+        <hr class="my-2 border-gray-200 md:my-6 dark:border-gray-700" />
         
         <div class="flex items-center justify-between">
             <a href="#" className=' flex flex-row'>

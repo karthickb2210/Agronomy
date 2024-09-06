@@ -51,13 +51,16 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+          <Link to={`/towerRent`}>
+          <li className="text-black hover:text-green-700 hover-transition">
+            <a href="#contact">Rental</a>
+          </li>
+          </Link>
           <li className="text-black hover:text-green-700 hover-transition">
           <Link to={`/farm`}>
             <div >Farm</div>
             </Link></li>
-          <li className="text-black hover:text-green-700 hover-transition">
-            <a href="#contact">Contact</a>
-          </li>
+          
         </ul>
         <div className="md:hidden text-black">
           <button id="menu-btn" onClick={toggleMenu}>
