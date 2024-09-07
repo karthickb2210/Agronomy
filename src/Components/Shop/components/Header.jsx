@@ -18,12 +18,12 @@ export default function Header() {
   }
 
   return (
-    <header id="main-header">
+    <header id="main-header" className='mt-12'>
       <div id="title">
-        <img src={logoImg} alt="A restaurant" />
-        <h1 className=' text-2xl text-black'>Iron valley Agronomy</h1>
+        {/* <img src={logoImg} alt="A restaurant" />
+        <h1 className=' text-2xl text-black'>Iron valley Agronomy</h1> */}
       </div>
-      <nav>
+      <nav >
         <Button textOnly onClick={handleShowCart}>
           Cart ({totalCartItems})
         </Button>

@@ -6,10 +6,12 @@ import Meals from './components/Meals.jsx';
 import { CartContextProvider } from './store/CartContext.jsx';
 import { UserProgressContextProvider } from './store/UserProgressContext.jsx';
 import "./shop.css"
-import CheckOut from '../CheckoutPage/CheckOut.jsx';
+import Navbar from '../HomePage/NavBar/Navbar.jsx';
 
 export default function Shop() {
   return (
+    <>
+    <Navbar />
     <div className='bod'>
       <UserProgressContextProvider>
       <CartContextProvider>
@@ -20,5 +22,6 @@ export default function Shop() {
       </CartContextProvider>
     </UserProgressContextProvider>
     </div>
+    </>
   )
 }

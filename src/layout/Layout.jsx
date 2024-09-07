@@ -20,7 +20,7 @@ export default function Layout() {
             
         </BrowserRouter>
         <footer className="py-2 bg-gray-800 text-white text-center">
-        <p>© 2024 Your Aeroponics Farm - All rights reserved</p>
+        <p>© 2024 IronValley Agronomy - All rights reserved</p>
       </footer>
     </>
   )

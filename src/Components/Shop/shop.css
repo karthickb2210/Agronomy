@@ -9,7 +9,7 @@
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:#e4ddd4;
+  background:#f8f6f5;
   color: #d9e2f1;
   min-height: 100vh;
 }
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding: 2rem 10%;
 }
 
 #main-header #title {
