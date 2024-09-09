@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import axiosInstance from '../../config/AxiosConfig';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -80,16 +81,20 @@ const CheckOut = () => {
     setAddressSuggestions([]);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Order Placed:', userDetails);
-    console.log('Cart Items:', cartItems);
-    toast.success("Your Order has been Booked");
-    setTimeout(()=>{
-      navigate("/")
-    },2000);
-    // Add logic to handle order placement
-  };
+  const [amount, setAmount] = useState(0);
+
+  
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Order Placed:', userDetails);
+  //   console.log('Cart Items:', cartItems);
+  //   toast.success("Your Order has been Booked");
+  //   setTimeout(()=>{
+  //     navigate("/")
+  //   },2000);
+  //   // Add logic to handle order placement
+  // };
 
   const totalAmount = cartItems.reduce(
     (totalPrice, item) => totalPrice + item.quantity * item.price,
@@ -99,6 +104,51 @@ const CheckOut = () => {
   // Calculate shipping charge
   const shippingCharge = totalAmount < 500 ? 120 : 0;
   const finalAmount = totalAmount + shippingCharge;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Call your backend API to create the order
+      const { data } = await axiosInstance.post('/create-order', { amount: finalAmount * 100 }); // Amount in paise
+
+      // Open Razorpay checkout
+      const options = {
+        key: 'rzp_test_wbXDO68U56KR2k',
+        amount: data.amount,
+        currency: 'INR',
+        name: 'IronValley Agronomy',
+        description: 'Test Transaction',
+        image: 'https://your-logo-url.com/logo.png',
+        order_id: data.id,
+        handler: function (response) {
+          alert("Payment ID: " + response.razorpay_payment_id);
+          alert("Order ID: " + response.razorpay_order_id);
+          alert("Signature: " + response.razorpay_signature);
+
+          // Verify the payment on the backend
+          axiosInstance.post('/verify-payment', {
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+          }).then((res) => {
+            alert('Payment verified successfully');
+          }).catch((err) => {
+            console.log(err)
+            alert('Payment verification failed');
+          });
+        },
+        theme: {
+          color: '#3399cc',
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (error) {
+      console.error("Payment Error: ", error);
+      alert('Payment failed');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 flex items-center justify-center p-6">

@@ -5,9 +5,13 @@ import Shop from '../Components/Shop/Shop.jsx'
 import Farm from '../Components/Farm/Farm.jsx'
 import CheckOut from '../Components/CheckoutPage/CheckOut.jsx'
 import RentTowerPage from '../Components/TowerRent/RentTowerPage.jsx'
+import SubscriptionPage from '../Components/Subscriptions/SubscriptionPage.jsx'
+import Navbar from '../Components/HomePage/NavBar/Navbar.jsx'
+import PaymentPage from '../Components/PaymentPage/PaymentPage.jsx'
 export default function Layout() {
   return (
     <>
+    
         <BrowserRouter>
              
             <Routes>
@@ -16,6 +20,8 @@ export default function Layout() {
                 <Route path='/farm' element={<Farm />}></Route>
                 <Route path='/cart/checkout' element={<CheckOut />}></Route>
                 <Route path='/towerRent' element={<RentTowerPage />}></Route>
+                <Route path='/subscription' element={<SubscriptionPage />}></Route>
+                <Route path='/pay' element={<PaymentPage />}></Route>
             </Routes>
             
         </BrowserRouter>

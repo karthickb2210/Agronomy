@@ -22,7 +22,7 @@ const Navbar = () => {
       <Link to={`/`}>
         <div className="text-black space-x-4 text-lg font-semibold flex">
             <img src={logo} className=' ml-10  max-h-8 max-w-8' alt='Logo' />
-            <a className='' href='#' >Ironvalley Agronomy</a>
+            <a className='' href='/' >Ironvalley Agronomy</a>
         </div>
         </Link>
         <ul className={`hidden md:flex ml-24 text-lg space-x-8`}>
@@ -54,6 +54,11 @@ const Navbar = () => {
           <Link to={`/towerRent`}>
           <li className="text-black hover:text-green-700 hover-transition">
             <a href="#contact">Rental</a>
+          </li>
+          </Link>
+          <Link to={`/subscription`}>
+          <li className="text-black hover:text-green-700 hover-transition">
+            <a href="#contact">Subscription</a>
           </li>
           </Link>
           <li className="text-black hover:text-green-700 hover-transition">
