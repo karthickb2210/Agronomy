@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Navbar from "../HomePage/NavBar/Navbar"
 import axiosInstance from '../../config/AxiosConfig';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -109,7 +110,7 @@ const CheckOut = () => {
     e.preventDefault();
     try {
       // Call your backend API to create the order
-      const { data } = await axiosInstance.post('/create-order', { amount: finalAmount * 100 }); // Amount in paise
+      const { data } = await axiosInstance.post('/create-order', { amount: (finalAmount.toFixed(2)) * 100 }); // Amount in paise
 
       // Open Razorpay checkout
       const options = {
@@ -151,7 +152,9 @@ const CheckOut = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 flex items-center justify-center p-6">
+    <>
+    <Navbar />
+    <div className="min-h-screen mt-16 bg-gradient-to-r from-blue-50 to-blue-200 flex items-center justify-center p-6">
       <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6">
         <h2 className="text-3xl font-bold text-center mb-6 text-blue-600">Checkout Your Cart</h2>
 
@@ -383,7 +386,7 @@ const CheckOut = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 
