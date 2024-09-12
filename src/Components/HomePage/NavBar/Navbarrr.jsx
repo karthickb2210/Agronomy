@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from "/logo.png"
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbarrr  = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -115,4 +115,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbarrr;
