@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link} from "react-router-dom"
 import { FaFacebook, FaInstagram, FaWhatsapp, FaUser, FaShoppingCart } from 'react-icons/fa';
 import logo from "/logo.png"
-const Navbar = () => {
+const NavBar = () => {
     const [store,SetStore] = useState(false)
     const [service,setService] = useState(false);
     const[brands,setBrands] = useState(false);
@@ -12,6 +12,8 @@ const Navbar = () => {
       {/* Top bar */}
       <div className="bg-green-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+
+
           {/* Social media icons */}
           <div className="flex space-x-4">
             <FaFacebook className="cursor-pointer hover:text-gray-300 transition duration-300 ease-in-out" />
@@ -126,4 +128,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Navbar from '../HomePage/NavBar/Navbar';
+import NavBar from '../HomePage/NavBar/NavBar';
 
 const SubscriptionPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -158,7 +158,7 @@ const SubscriptionPage = () => {
 
   return (
     <>
-    <Navbar />
+    <NavBar />
     <div className="min-h-screen bg-white text-black p-6 mt-36">
       {/* Hero Section */}
       <section className="bg-green-500 text-white p-10 mb-10 rounded-lg text-center">

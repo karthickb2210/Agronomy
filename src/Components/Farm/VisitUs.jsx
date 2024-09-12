@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../HomePage/NavBar/Navbar';
+import NavBar from '../HomePage/NavBar/NavBar';
 import Footer from '../HomePage/Footer/Footer';
 import BookingForm from './BookingForm';
 
@@ -8,7 +8,7 @@ const VisitUs = () => {
   const [showForm,setShowFarm] = useState(false)
   return (
     <>
-    <Navbar />
+    <NavBar />
     { showForm && 
       <BookingForm 
       status = {showForm}

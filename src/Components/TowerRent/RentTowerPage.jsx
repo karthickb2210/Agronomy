@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Footer from "../HomePage/Footer/Footer";
-import Navbar from "../HomePage/NavBar/Navbar";
+import NavBar from "../HomePage/NavBar/NavBar";
 import rent1 from "/rent1.png" 
 import rent2 from "/rent2.png" 
 const RentTowerPage = () => {
   return (
     <>
-    <Navbar />
+    <NavBar />
     <div className="bg-white text-black  mt-36">
       {/* Header Section */}
       <header className="py-10 text-center bg-green-600 text-white">
