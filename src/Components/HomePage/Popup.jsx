@@ -16,7 +16,7 @@ const Popup = () => {
     <>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20">
-          <div className="relative bg-white p-6 rounded-lg shadow-lg  md:mx-8 lg:mx-16">
+          <div className="relative bg-white p-6 rounded-lg shadow-lg  md:mx-6 lg:mx-12">
             {/* Close Button at Top Right */}
             <button
               onClick={handleClose}
@@ -58,6 +58,14 @@ const Popup = () => {
         >
           Aeroponic Tower Farm
         </motion.h2>
+        <motion.h3
+          className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold mt-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          We Offer Educational workshops & free visit for families/communities .
+        </motion.h3>
         <Link to={`/farm`}>
           <motion.button
             className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-white text-green-500 font-semibold rounded-md shadow-lg hover:bg-gray-200 transition-all duration-300"

@@ -6,14 +6,14 @@ import Featured from "./Featured/Featured"
 import Process from "./Process/Process"
 import Footer from "./Footer/Footer"
 import Popup from './Popup'
-import Navbar from './NavBar/NavBar'
+import NavBar from './NavBar/NavBar'
 
 
 export default function MainPage() {
   return (
     <>
     <Popup />
-        <Navbar />
+        <NavBar />
     <Carousel/>
     {/* <AeroponicsFarming /> */}
     <HighlightedProducts />
