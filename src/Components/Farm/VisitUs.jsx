@@ -15,7 +15,7 @@ const VisitUs = () => {
       handleState = {setShowFarm}
        />
     }
-    <div className="flex flex-col items-center justify-center p-6 mt-24  min-h-screen">
+    <div className="flex flex-col items-center justify-center p-6 mt-36  min-h-screen">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl transform transition hover:shadow-2xl">
         <h2 className="text-3xl font-bold mb-4 text-green-700 text-center">Visit Our Aeroponics Farm</h2>
         <p className="text-gray-700 mb-4 text-center">

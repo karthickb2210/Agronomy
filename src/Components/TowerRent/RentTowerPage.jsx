@@ -8,7 +8,7 @@ const RentTowerPage = () => {
   return (
     <>
     <Navbar />
-    <div className="bg-white text-black mt-20">
+    <div className="bg-white text-black  mt-36">
       {/* Header Section */}
       <header className="py-10 text-center bg-green-600 text-white">
         <motion.h1

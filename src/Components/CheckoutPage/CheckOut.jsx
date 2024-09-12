@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from "../HomePage/NavBar/Navbar"
+import Navbar from "../HomePage/NavBar/Navbarrr"
 import axiosInstance from '../../config/AxiosConfig';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';

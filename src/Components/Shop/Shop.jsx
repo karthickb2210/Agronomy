@@ -6,7 +6,7 @@ import Meals from './components/Meals.jsx';
 import { CartContextProvider } from './store/CartContext.jsx';
 import { UserProgressContextProvider } from './store/UserProgressContext.jsx';
 import "./shop.css"
-import Navbar from '../HomePage/NavBar/Navbar.jsx';
+import Navbar from '../HomePage/NavBar/NavBar.jsx';
 
 export default function Shop() {
   return (

@@ -159,7 +159,7 @@ const SubscriptionPage = () => {
   return (
     <>
     <Navbar />
-    <div className="min-h-screen bg-white text-black p-6 mt-24">
+    <div className="min-h-screen bg-white text-black p-6 mt-36">
       {/* Hero Section */}
       <section className="bg-green-500 text-white p-10 mb-10 rounded-lg text-center">
         <h1 className="text-5xl font-bold mb-4">Fresh Herbs Delivered to Your Doorstep</h1>

@@ -6,8 +6,9 @@ import Farm from '../Components/Farm/Farm.jsx'
 import CheckOut from '../Components/CheckoutPage/CheckOut.jsx'
 import RentTowerPage from '../Components/TowerRent/RentTowerPage.jsx'
 import SubscriptionPage from '../Components/Subscriptions/SubscriptionPage.jsx'
-import Navbar from '../Components/HomePage/NavBar/Navbar.jsx'
+import Navbar from '../Components/HomePage/NavBar/Navbarrr.jsx'
 import PaymentPage from '../Components/PaymentPage/PaymentPage.jsx'
+import Navbarr from '../Components/HomePage/NavBar/NavBar.jsx'
 export default function Layout() {
   return (
     <>
@@ -22,6 +23,7 @@ export default function Layout() {
                 <Route path='/towerRent' element={<RentTowerPage />}></Route>
                 <Route path='/subscription' element={<SubscriptionPage />}></Route>
                 <Route path='/pay' element={<PaymentPage />}></Route>
+                <Route path='/nav' element={<Navbarr />}></Route>
             </Routes>
             
         </BrowserRouter>
